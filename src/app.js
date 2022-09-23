@@ -32,7 +32,7 @@ app.get("/temp", (req, res)=>{
 
 app.get("*", (req, res)=>{
     res.render('404error', {
-        errorMsg : 'Opps! Page Not Found'
+        errorMsg : 'Opps! Page Not Found!'
     })
 })
 app.listen(port ,() =>{
