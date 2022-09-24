@@ -78,7 +78,7 @@
                 "Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"
             ]
             var now = new Date();
-            var month = months[now.getMonth()+1];
+            var month = months[now.getMonth()];
             var date = now.getDate();
             var year = now.getFullYear();
 
@@ -94,7 +94,7 @@
                 mins="0" + mins;
             }
 
-            return `${month} ${date} | ${hours}:${mins}${periods}`
+            return `${month} ${date}-${year} | ${hours}:${mins}${periods}`
         };
         let todaydate = document.getElementById('today_date');
         todaydate.innerHTML =  getCurrentTime();
