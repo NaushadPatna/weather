@@ -104,9 +104,14 @@ body{
 .main_header_left h1{
     font-size: 4rem;
     margin: 1rem 0 4rem 0;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
 }
 
+.main_header_left h2{
+    font-size: 3rem;
+    margin: 1rem 0 4rem 0;
+    /* text-transform: capitalize; */
+}
 
 .img1{
     margin-top: 0 ;
