@@ -65,6 +65,7 @@ body{
 
 /* main header */
 .main_header_left{
+    position: relative;
     margin-top: 10rem ;
     display: flex;
     flex-direction: column;
@@ -132,8 +133,15 @@ footer p{
     margin: 0;
     text-align: center;
     color: #fff;
-    line-height: 5rem;
+    line-height: 3rem;
     font-size: 2rem;
+}
+.dev{
+    margin: 0;
+    text-align: center;
+    color: #000;
+    line-height: 1rem;
+    font-size: 1rem;
 }
 .temp_form{
     width: 60%;
