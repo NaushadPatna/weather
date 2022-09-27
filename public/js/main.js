@@ -64,7 +64,8 @@ const getInfo=async(event)=>{
                 "<i class='fa-solid fa-water text-success'></i>";
             } else if (tempMood == "Snow"){
                 tempstatus.innerHTML = 
-                "<i class='fa-solid fa-igloo text-white'></i>";
+                "<i class='fa-solid fa-snowman text-white'></i>";
+                // <i class="fa-solid fa-globe-snow"></i>
             } else {
                 tempstatus.innerHTML = 
                 "<i class='fa-solid fa-sun text-warning'></i>";

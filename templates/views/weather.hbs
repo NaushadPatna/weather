@@ -22,20 +22,20 @@
                     </div>
                     <div class="main_layer">
                         <p id="city_name">Get Output Here</p>
-                        <div class="middle_layer data_hide">
+                        <div class="middle_layer data_hide text-center">
                             <p id="temp"><span id="temp_real_val">0</span> <sup>0</sup> C</p>
-                            <p id="temp_status"><i class='fa-sharp fa-solid fa-snowflake text-warning'></i></p>
+                            <p id="temp_status"><i class='fa-solid fa-snowflake text-warning'></i></p>
                             <br>
                         </div>
                         <div class="bottom_layer data_hide1">
                             <div class="col-md-4 col-4 text-center mx-auto ">
-                                <p id="Visiblity">Visibilty 1000 m</p>
+                                <p id="Visiblity"></p>
                             </div>
                             <div class="col-md-4 col-4 text-center mx-auto ">
-                                <p id="windSpeed">3km/h</p>
+                                <p id="windSpeed"></p>
                             </div>
                             <div class="col-md-4 col-4 text-center mx-auto ">
-                                <p id="temp_status_d">Rainy</p>
+                                <p id="temp_status_d"></p>
                             </div>
                         </div>
                     </div>
@@ -95,11 +95,15 @@
             if(mins < 10) {
                 mins="0" + mins;
             }
-            
             return `${month} ${date}-${year} | ${hours}:${mins}${periods}`;
         };
-        let todaydate = document.getElementById('today_date');
-        todaydate.innerHTML =  getCurrentTime();
+        
+        const Displaytime = ()=>{
+            let todaydate = document.getElementById('today_date');
+            todaydate.innerHTML =  getCurrentTime();
+        }
+        
+        setInterval(Displaytime,1000);
        
     </script>
 </body>
