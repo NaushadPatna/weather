@@ -18,7 +18,7 @@
                 <div class="tempInformation">
                     <div class="top_layer">
                         <p id="day">Wednesday</p>
-                        <p id="today_date">13 OCT</p>
+                        <p id="today_date"></p>
                     </div>
                     <div class="main_layer">
                         <p id="city_name">Get Output Here</p>
@@ -28,16 +28,15 @@
                             <br>
                         </div>
                         <div class="bottom_layer data_hide1">
-                                <div class="col-md-4 col-4 text-center mx-auto ">
-                                    <p id="Visiblity">Visibilty 1000 m</p>
-                                </div>
-                                <div class="col-md-4 col-4 text-center mx-auto ">
-                                    <p id="windSpeed">3km/h</p>
-                                </div>
-                                <div class="col-md-4 col-4 text-center mx-auto ">
-                                    <p id="temp_status_d">Rainy</p>
-                                </div>
-                            
+                            <div class="col-md-4 col-4 text-center mx-auto ">
+                                <p id="Visiblity">Visibilty 1000 m</p>
+                            </div>
+                            <div class="col-md-4 col-4 text-center mx-auto ">
+                                <p id="windSpeed">3km/h</p>
+                            </div>
+                            <div class="col-md-4 col-4 text-center mx-auto ">
+                                <p id="temp_status_d">Rainy</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -84,20 +83,24 @@
 
             let hours = now.getHours();
             let mins = now.getMinutes();
+            
+           
 
-            let peridos = "AM";
+            let periods = "AM";
             if (hours > 11) {
                 periods = "PM";
                 if (hours > 12) hours -=12;
             }
-            if(mins<10) {
+
+            if(mins < 10) {
                 mins="0" + mins;
             }
-
-            return `${month} ${date}-${year} | ${hours}:${mins}${periods}`
+            
+            return `${month} ${date}-${year} | ${hours}:${mins}${periods}`;
         };
         let todaydate = document.getElementById('today_date');
         todaydate.innerHTML =  getCurrentTime();
+       
     </script>
 </body>
 </html>
